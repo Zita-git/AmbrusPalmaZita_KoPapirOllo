@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDontetlen"
+            android:text="Döntetlenek száma: 0"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imagineViewTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A te választásod"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imagineViewGV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/rock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A gép választása"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewEredmeny"
+            android:text="Eredmény: Ember: 0 Computer: 0"
+            android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonKO"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:text="KŐ"
+            android:background="@drawable/rock"/>
+
+            <Button
+                android:id="@+id/buttonPAPIR"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:text="PAPÍR"
+                android:background="@drawable/paper" />
+
+            <Button
+                android:id="@+id/buttonOLLO"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:text="OLLÓ"
+                android:background="@drawable/scissors"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+</RelativeLayout>
