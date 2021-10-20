@@ -83,11 +83,10 @@ public class MainActivity extends AppCompatActivity {
     public void valakiNyert(){
         textViewEredmeny.setText("Eredmény: Ember: "+teNyert+" Computer: "+gepNyert);
 
-        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
-        alertBuilder.setCancelable(false);
-
         if(teValasz==gepValasz){
             dontetlen++;
+            Toast.makeText(MainActivity.this, "Döntetlen", Toast.LENGTH_SHORT).show();
+
             textViewDontetlen.setText("Döntetlenek száma: "+dontetlen);
 
         }else if(
@@ -105,7 +104,16 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "Te nyertél", Toast.LENGTH_SHORT).show();
             teNyert++;
         }
+        if (gepNyert==3||teNyert==3) {
+            nyertes();
+        }
+    }
 
+    public void nyertes(){
+
+
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setCancelable(false);
 
         if (gepNyert==3){
             alertBuilder.setTitle("Vereség");
