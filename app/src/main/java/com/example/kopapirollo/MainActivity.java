@@ -39,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
         buttonKO.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                teValasz=1;
+                gepValasz();
                 TV.setImageResource(R.drawable.rock);
 
-                gepValasz();
                 valakiNyert();
             }
         });
@@ -49,18 +50,20 @@ public class MainActivity extends AppCompatActivity {
         buttonPAPIR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                teValasz=2;
+                gepValasz();
                 TV.setImageResource(R.drawable.paper);
 
-                gepValasz();
                 valakiNyert();
             }
         });
         buttonOLLO.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                teValasz=3;
+                gepValasz();
                 TV.setImageResource(R.drawable.scissors);
 
-                gepValasz();
                 valakiNyert();
             }
         });
@@ -81,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void valakiNyert(){
-        textViewEredmeny.setText("Eredmény: Ember: "+teNyert+" Computer: "+gepNyert);
 
         if(teValasz==gepValasz){
             dontetlen++;
+            textViewEredmeny.setText("Eredmény: Ember: "+teNyert+" Computer: "+gepNyert);
             textViewDontetlen.setText("Döntetlenek száma: "+dontetlen);
             Toast.makeText(MainActivity.this, "Döntetlen", Toast.LENGTH_SHORT).show();
 
@@ -94,15 +97,18 @@ public class MainActivity extends AppCompatActivity {
                 (teValasz==2 && gepValasz==3) ||
                 (teValasz==3 && gepValasz==1)
         ){
-            Toast.makeText(MainActivity.this, "A computer nyert", Toast.LENGTH_SHORT).show();
             gepNyert++;
+            textViewEredmeny.setText("Eredmény: Ember: "+teNyert+" Computer: "+gepNyert);
+            Toast.makeText(MainActivity.this, "A computer nyert", Toast.LENGTH_SHORT).show();
+
         }else if(
                 (teValasz==2 && gepValasz==1) ||
                 (teValasz==3 && gepValasz==2) ||
                 (teValasz==1 && gepValasz==3)
         ){
-            Toast.makeText(MainActivity.this, "Te nyertél", Toast.LENGTH_SHORT).show();
             teNyert++;
+            textViewEredmeny.setText("Eredmény: Ember: "+teNyert+" Computer: "+gepNyert);
+            Toast.makeText(MainActivity.this, "Te nyertél", Toast.LENGTH_SHORT).show();
         }
         if (gepNyert==3||teNyert==3) {
             nyertes();
@@ -143,7 +149,15 @@ public class MainActivity extends AppCompatActivity {
     public void ujMenet(){
         teNyert=0;
         gepNyert=0;
+
         dontetlen=0;
+
+        teValasz=1;
+        gepValasz=1;
+
+        TV.setImageResource(R.drawable.rock);
+        GV.setImageResource(R.drawable.rock);
+
         textViewEredmeny.setText("Eredmény: Ember: "+teNyert+" Computer: "+gepNyert);
         textViewDontetlen.setText("Döntetlenek száma: "+dontetlen);
 

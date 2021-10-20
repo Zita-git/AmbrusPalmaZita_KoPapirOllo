@@ -22,8 +22,8 @@
 
         <ImageView
             android:id="@+id/imagineViewTV"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+            android:layout_width="137dp"
+            android:layout_height="137dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock" />
 
@@ -35,8 +35,8 @@
 
         <ImageView
             android:id="@+id/imagineViewGV"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+            android:layout_width="137dp"
+            android:layout_height="137dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/rock" />
 
@@ -60,22 +60,22 @@
 
         <Button
             android:id="@+id/buttonKO"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="137dp"
+            android:layout_height="137dp"
             android:text="KŐ"
             android:background="@drawable/rock"/>
 
             <Button
                 android:id="@+id/buttonPAPIR"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="137dp"
+                android:layout_height="137dp"
                 android:text="PAPÍR"
                 android:background="@drawable/paper" />
 
             <Button
                 android:id="@+id/buttonOLLO"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="137dp"
+                android:layout_height="137dp"
                 android:text="OLLÓ"
                 android:background="@drawable/scissors"/>
     </LinearLayout>
