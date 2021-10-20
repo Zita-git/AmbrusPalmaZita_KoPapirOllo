@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
         if(teValasz==gepValasz){
             dontetlen++;
+            textViewDontetlen.setText("Döntetlenek száma: "+dontetlen);
             Toast.makeText(MainActivity.this, "Döntetlen", Toast.LENGTH_SHORT).show();
 
-            textViewDontetlen.setText("Döntetlenek száma: "+dontetlen);
 
         }else if(
                 (teValasz==1 && gepValasz==2) ||
